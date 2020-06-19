@@ -49,7 +49,7 @@ train_dataset = tf.data.Dataset.from_tensor_slices(tf.reshape(training_set, [1,1
 Each dataset above contains 128 datapoints with two dimensions. If you want to add a new data set, just add a new one with the same dimensions, or you can also customize it according to your purposes and change the whole dimensions too!.
 
 You will need to change the paths of some files, and I believe that you can do it by your own, no need to say anythin about that :) 
-If you want to see more examples, ![this](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900) is a cool place to start, and dont forget to read the paper below to understand the basics of GAN.
+If you want to see more examples, [this](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900) is a cool place to start, and dont forget to read the paper below to understand the basics of GAN.
 
 [1] I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley, S. Ozair, A. Courville, and Y. Bengio. Generative adversarial nets (2014), NIPS 2014.
 
