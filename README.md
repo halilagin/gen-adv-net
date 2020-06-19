@@ -55,4 +55,3 @@ If you want to see more examples, ![this](https://medium.com/@jonathan_hui/gan-s
 
 Best!
 
-Best!
