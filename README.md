@@ -14,14 +14,14 @@ This example generates the animated GIF named "000_merge-2.gif", which is also s
 If you want to visualize a new function you need to change the code fragment below:
 
 ```python
-#generate a dataset whose elemnts are one of [[1,1],[-1,1],[-1,-1],[1,-1]]
+#generate a dataset whose elements are one of [[1,1],[-1,1],[-1,-1],[1,-1]]
 fourpoints_set = tf.tile(tf.constant([[1,1],[-1,1],[-1,-1],[1,-1]]), [TRAINING_SIZE//8,1])
 
-#generate a dataset whose elemnts are points of a circled centered at (0,0)
+#generate a dataset whose elements are points of a circle centered at (0,0)
 pi_ = tf.reshape(tf.linspace(-np.pi,np.pi,TRAINING_SIZE//2),[TRAINING_SIZE//2,1])
 circle_set = tf.concat([tf.cos(pi_),tf.sin(pi_)], -1)
 
-##generate square with corners [[1,1],[-1,1],[-1,-1],[1,-1]]
+##generate a square with corners [[1,1],[-1,1],[-1,-1],[1,-1]]
 line_size=TRAINING_SIZE//8
 square_upline_lr = tf.stack([tf.linspace(-1.,1.,line_size),tf.constant([1.0]*line_size)],axis=-1)
 square_rightline_tb = tf.stack([tf.constant([1.0]*line_size),tf.linspace(1.,-1.,line_size),],axis=-1)
@@ -29,7 +29,7 @@ square_botline_rl = tf.stack([tf.linspace(1.,-1.,line_size),tf.constant([-1.0]*l
 square_leftline_bt = tf.stack([tf.constant([-1.0]*line_size),tf.linspace(-1.,1.,line_size),],axis=-1)
 square_set = tf.concat([square_upline_lr,square_rightline_tb,square_botline_rl,square_leftline_bt],axis=0)
 
-#generate a dataset whose elemnts are points of a circled centered at (0,0)
+#generate a dataset whose elements are points of a x^2 function 
 x2 = tf.reshape(tf.linspace(-1.,1.,TRAINING_SIZE//2),[TRAINING_SIZE//2,1])
 x2_set = tf.concat([x2,tf.constant(x2**2)], -1)
 
